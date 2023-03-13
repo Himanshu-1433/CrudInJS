@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/logo-design-template-35b0a3e2315d19a46c046165f315b000.jpg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./bootstrap/css/css_file.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/564e4f7564.css" crossorigin="anonymous">
+    <title>Std Mgt</title>
+    <style>
+        table {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        th.col-1 {
+            overflow-x: auto;
+        }
+
+        td.col-1 {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back_bone">
+        <div class="container-fluid bg-light mt-5 pb-5"
+            style="border-top-right-radius: 50px;border-top-left-radius: 50px;border-bottom: 1px solid rgba(0, 0, 0, 0.39);">
+            <div class="row">
+                <div class="d-flex align-items-center justify-content-center col-md-12">
+                    <img src="./assets/Logo.png" class="img img-thumbnail" style="border: none;" alt="logoOfSite">
+                    <div class="punchLine">
+                        Student Management System
+                    </div>
+                </div>
+            </div>
+            <div class="text-right">
+                <button type="button" class="btn btn-primary text-right" data-toggle="modal"
+                    data-target="#exampleModalLong">
+                    <i class="fa-solid fa-plus"> </i> Add Student
+                </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="d-flex align-items-center justify-content-center col-md-12">
+                                <img src="./assets/Logo.png" class="img img-thumbnail" style="border: none;"
+                                    alt="logoOfSite">
+                                <div class="punchLine">
+                                    Student Management System
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <h1 id="FormHeading" class="text-center">Enter Student Data</h1>
+                            <div class="row my-3 mx-2">
+                                <div class="col-12">
+                                    <!-- Name Feild -->
+                                    <div class="form-group">
+                                        <label for="Name">Name</label>
+                                        <input type="text" class="form-control" id="Fname"
+                                            placeholder="Enter Your Full name">
+                                        <span class="form-text me-2 text-danger" id="errorMsgName"></span>
+                                    </div>
+
+                                    <!-- Email Feild -->
+                                    <div class="form-group">
+                                        <label for="Email">Email address</label>
+                                        <input type="email" class="form-control" id="EmailAdd"
+                                            aria-describedby="emailHelp" placeholder="Enter email">
+                                        <span class="form-text me-2 text-danger" id="errorMsgEmail"></span>
+                                    </div>
+
+                                    <!-- Name Feild -->
+                                    <div class="form-group">
+                                        <label for="Pnumber">Phone Number</label>
+                                        <input type="number" class="form-control" id="Pnumber"
+                                            placeholder="Enter Your Phone Number" maxlength="10">
+                                        <span class="form-text me-2 text-danger" id="errorMsgNumber"></span>
+                                    </div>
+
+
+                                    <!-- date Feild -->
+                                    <div class="form-group">
+                                        <label for="BirthDate">BirthDay Date</label>
+                                        <div class="input-group mb-3">
+                                            <input type="date" class="form-control" id="date">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-calendar-days"></i></span>
+                                            </div>
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgDate"></span>
+                                    </div>
+
+                                    <!-- Time Feild -->
+                                    <div class="form-group">
+                                        <label for="Time">Appointment time</label>
+                                        <div class="input-group mb-3">
+                                            <input type="Time" class="form-control" id="time">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i
+                                                        class="fa-solid fa-clock"></i></i></span>
+                                            </div>
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgTime"></span>
+                                    </div>
+
+                                    <!-- Favorite color -->
+                                    <div class="form-group">
+                                        <label for="FavoriteColor">Favorite color</label>
+                                        <select class="form-control" aria-label="Default select example" id="colorInput"
+                                            value="">
+                                            <option disabled selected>choose</option>
+                                            <option value="Red">Red</option>
+                                            <option value="Green">Green</option>
+                                            <option value="Blue">Blue</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <span class="form-text me-2 text-danger" id="errorMsgColor"></span>
+                                    </div>
+
+                                    <!-- Payment Method -->
+                                    <div class="form-group">
+                                        <div class="mx-2">
+                                            <label for="Payment">Payment Method :- </label>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="payment"
+                                                        id="Cash" value="Cash">Cash
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="payment"
+                                                        id="Card" value="Card">Card
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="payment" id="UPI"
+                                                        value="UPI">UPI
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgPayment"></span>
+                                    </div>
+
+                                    <!-- Age Input -->
+                                    <div class="form-group">
+                                        <label for="Age">Age</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <p class="input-group-text" id="iconOfAge">Age</p>
+                                            </div>
+                                            <input type="range" class="form-control mx-2" value="0" id="Age"
+                                                onchange="ageChecker(this.value)">
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgAge"></span>
+                                    </div>
+
+                                    <!-- File Input -->
+                                    <div class="form-group">
+                                        <label for="File">Choose Your Photo</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Upload</span>
+                                            </div>
+                                            <div class="custom-file"> <input type="file" class="custom-file-input"
+                                                    id="FileInput">
+                                                <label class="custom-file-label" for="inputGroupFile01">Choose
+                                                    file</label>
+                                            </div>
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgFile"></span>
+                                    </div>
+
+                                    <!-- CheckBox Feild -->
+                                    <div class="form-group">
+                                        <label for="Terms">
+                                            <li>Read All The Terms and Condition </li>
+                                        </label>
+                                        <textarea class="form-control my-3" id="exampleFormControlTextarea1" rows="3"
+                                            readonly>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam libero natus illo fugit pariatur quas beatae nam sunt placeat, harum exercitationem fuga minima quis ipsam expedita deserunt cum. Autem, mollitia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam minus quis, voluptate facere dolorem velit a magni quisquam asperiores, laudantium officia iusto itaque voluptatibus fuga? Magni veritatis beatae facere autem!</textarea>
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="termsAcondition">
+                                            <label class="form-check-label" for="exampleCheck1">Accept All Terms And
+                                                Condition</label>
+                                        </div>
+                                        <span class="form-text me-2 text-danger" id="errorMsgTerms"></span>
+                                    </div>
+                                    <button type="submit" id="submit"
+                                        class="btn btn-outline-primary w-100">Submit</button>
+                                    <p class="form-text me-2 text-danger" id="msgError">Something went wrong</p>
+                                    <p class="form-text me-2 text-success" id="msg"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light border border-none">
+            <table class="table text-center" style="overflow-x: scroll;" id="table">
+                <tr class="row">
+                    <th class="col-1">
+                        Name
+                    </th>
+                    <th class="col-1">
+                        Email
+                    </th>
+                    <th class="col-1">
+                        Phone Number
+                    </th>
+                    <th class="col-1">
+                        BirthDate
+                    </th>
+                    <th class="col-1">
+                        Appointment Time
+                    </th>
+                    <th class="col-1">
+                        Favorite Color
+                    </th>
+                    <th class="col-1">
+                        Payment Method
+                    </th>
+                    <th class="col-1">
+                        Age
+                    </th>
+                    <th class="col-1">
+                        Agree
+                    </th>
+                    <th class="col-1">
+                        Attachment
+                    </th>
+                    <th class="col-1">
+                        Edit
+                    </th>
+                    <th class="col-1">
+                        Delete
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+        <script src="./app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
