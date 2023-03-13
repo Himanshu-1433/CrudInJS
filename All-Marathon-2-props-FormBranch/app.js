@@ -262,18 +262,3 @@ function editData(id) {
   FileInput.value = data[id][8];
   console.log(data);
 }
-
-// let Fname = document.getElementById("Fname");
-// let EmailAdd = document.getElementById("EmailAdd");
-// let Pnumber = document.getElementById("Pnumber");
-// let date = document.getElementById("date");
-// let time = document.getElementById("time");
-// let colorInput = document.getElementById("colorInput");
-// let Payment = document.getElementsByName("payment");
-// let Age = document.getElementById("Age");
-// let termsAcondition = document.getElementById("termsAcondition");
-// let iconOfAge = document.getElementById("iconOfAge");
-// let span = document.getElementsByTagName("span");
-// let submit = document.getElementById("submit");
-// let table = document.getElementById("table");
-// let FileInput = document.getElementById("FileInput");
